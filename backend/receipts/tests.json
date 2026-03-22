@@ -1,0 +1,26 @@
+{
+  "tests": [
+    {
+      "name": "Get receipts list",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedBody": [],
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Create receipt",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "supplier": "ООО Тест",
+        "items": [
+          {"product_name": "Тестовый товар", "quantity": 10, "price": 100}
+        ]
+      },
+      "expectedStatus": 201,
+      "expectedBody": {"receipt_number": "string"},
+      "bodyMatcher": "partial"
+    }
+  ]
+}
