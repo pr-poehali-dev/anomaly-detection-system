@@ -1,0 +1,26 @@
+{
+  "tests": [
+    {
+      "name": "Get writeoffs list",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedBody": [],
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Create writeoff",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "reason": "Брак",
+        "items": [
+          {"product_name": "Тестовый товар", "quantity": 2, "price": 50}
+        ]
+      },
+      "expectedStatus": 201,
+      "expectedBody": {"writeoff_number": "string"},
+      "bodyMatcher": "partial"
+    }
+  ]
+}

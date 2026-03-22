@@ -32,6 +32,12 @@ export default function Header({ className }: HeaderProps) {
           >
             Приход
           </Link>
+          <Link
+            to="/writeoffs"
+            className="text-white hover:text-neutral-400 transition-colors duration-300 uppercase text-sm"
+          >
+            Списание
+          </Link>
           <a
             href="#download"
             className="text-white hover:text-neutral-400 transition-colors duration-300 uppercase text-sm"
